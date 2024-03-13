@@ -24,6 +24,7 @@ public class JdbcTableCreation {
             System.out.println("Table creation SuckS !!");
         }
 
+        // close connections
         statm.close();
         con.close();
     }
