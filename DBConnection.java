@@ -15,8 +15,6 @@ public class DBConnection {
         props.setProperty("user", "system");
         props.setProperty("password", "tiger");
 
-        // You can also set other properties like SSL, connection timeout etc.
-
         return DriverManager.getConnection(url, props);
     }
 }
