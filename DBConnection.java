@@ -4,17 +4,13 @@ import java.util.Properties;
 public class DBConnection {
     static Connection con = null;
 
+    // load the driver
     public static Class loadDriver() throws Exception {
         return Class.forName("oracle.jdbc.driver.OracleDriver");
     }
 
-    public static Connection getConnection() throws SQLException {
-        String url = "jdbc:oracle:thin:@localhost:1521:XE";
-
-        Properties props = new Properties();
-        props.setProperty("user", "system");
-        props.setProperty("password", "tiger");
-
-        return DriverManager.getConnection(url, props);
+    // get the connection
+    public static Connection getConnection() throws Exception {
+        return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "tiger");
     }
 }
