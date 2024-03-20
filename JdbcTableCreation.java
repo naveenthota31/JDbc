@@ -14,7 +14,8 @@ public class JdbcTableCreation {
         Statement statm = con.createStatement();
 
         // query
-        String query = "CREATE TABLE students_02 (rollno number(10), name varchar2(10), email varchar2(100))";
+        String query = "CREATE TABLE students_01(rollno int, name char(10), email char(100))";
+
         int n = statm.executeUpdate(query);
         System.out.println("Value of n is : " + n);
 

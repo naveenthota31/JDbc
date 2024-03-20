@@ -32,7 +32,7 @@ public class JdbcDataInsertion {
             String email = sc.next();
 
             // create a query
-            String query = "INSERT INTO students_23 VALUES(" + rno + ",'" + name + "','" + email + "')";
+            String query = "INSERT INTO students_01 VALUES(" + rno + ",'" + name + "','" + email + "')";
             st.executeUpdate(query);
 
             System.out.println("Successfully inserted the record of: " + rno);
