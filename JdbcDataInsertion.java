@@ -21,7 +21,9 @@ public class JdbcDataInsertion {
 
         // create statement
         Statement st = con.createStatement();
+         String query1 = "CREATE TABLE students_01(rollno int, name char(10), email char(100))";
 
+        int n = statm.executeUpdate(query1);
         // take input from user
         for (int i = 0; i < noOfRecords; i++) {
             System.out.println("Roll Number " + (i + 1) + ": ");
